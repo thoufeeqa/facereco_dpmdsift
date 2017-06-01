@@ -1,5 +1,4 @@
-/*This program is the test phase uses Dense SIFT algorithm
-	with DPM in recognizing the person
+/*This program implements the Deformable parts model and dense SIFT
 */
 
 #include "opencv2/opencv.hpp"
@@ -185,6 +184,8 @@ int main () {
 			}
 			
 			// Use support vector machines to classify if faces belong in authorized set or not
+			// Uses a predefined set of 4 people temporarily for demonstration. 
+			//Production system replaces this with Database queries over the internet.
 			float prediction=SVM1.predict(data,90*128);
 			float prediction1=SVM2.predict(data1,90*128);
 			float prediction2=SVM3.predict(data2,90*128);
@@ -206,7 +207,9 @@ int main () {
 				 
 			cout<<prediction<<prediction1<<prediction2<<prediction3;
 
-			//Displaying the results
+			//Displaying the results, uses 4 people for now.
+			// Uses a predefined set of 4 people temporarily. 
+			//Production system replaces this with Database queries over the internet.
 			 switch(predict)
 			{
 			 case 0:putText(img,"person1",Point(bbox[0]-20,bbox[1]),3,2,Scalar(255,255,0));break;
