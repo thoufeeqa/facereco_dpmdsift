@@ -92,7 +92,7 @@ int main () {
 			Rect crop(Point (bbox[0],bbox[1]),Point (bbox[2],bbox[3])); //crop faces from frame ~ recognition done on these pixels only
 			Point a1(bbox[0],bbox[1]);
 			Point a2(bbox[2],bbox[3]);
-			//	stringstream kk;kk<<"C:/Users/thoufeeq/Documents/Visual Studio 2012/Projects/Project4/Project4/out/face/";kk<<k;kk<<".jpg";
+
 			rectangle(img,a1,a2,Scalar(255,0,255),4,8,0);	
 			//imshow("a",img);
 			//imwrite(kk.str(),img);

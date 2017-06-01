@@ -59,7 +59,7 @@ int main () {
 	vector <Rect> faces;
 	Mat gray;
 	front.load("haarcascade_frontalface_alt.xml");
-    string fn_csv = "tr.csv";
+    string fn_csv = "training.csv";
     int deviceId = 0;
     vector<Mat> images;
     vector<int> labels;
@@ -72,7 +72,6 @@ int main () {
 	catch (cv::Exception& e) 
 	{
         cerr << "Error opening file \"" << fn_csv << "\". Reason: " << e.msg << endl;
-        // nothing more we can do
         exit(1);
     }
 	
@@ -88,7 +87,7 @@ int main () {
 				{
 
 
-					img=images[j];//imread("C:/Users/Arun_BP/Documents/Visual Studio 2012/Projects/Project4/Project4/videotest/joshan/out0.jpg");
+					img=images[j];
 					t = (double)cvGetTickCount();
 					cout<<"Got the image at"<<img.cols<<"x"<<img.rows<<" resolution..\n";
 		
