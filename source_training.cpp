@@ -126,10 +126,12 @@ int main () {
 							int xLm1=int(featurepts[6])-MouthRatio,yLm1=int(featurepts[7])-MouthRatio;
 							int xLm2=int(featurepts[8])+MouthRatio,yLm2=int(featurepts[9])+MouthRatio;
 							
+							//define regions of interest
 							Rect ROIl(Point(xL1,yL1),Point(xL2,yL2)); 
 							Rect ROIR(Point(xR1,yR1),Point(xR2,yR2));
 							Rect ROIM(Point(xLm1,yLm1),Point(xLm2,yLm2));
 
+							//covert to grayscale
 							Mat eyeL=gray(ROIl);
 							Mat eyeR=gray(ROIR);
 							Mat Mouth=gray(ROIM);
@@ -140,6 +142,7 @@ int main () {
 							resize(img2,img2,Size(200,200));
 							imshow("img2",img2);
 							
+							//normalize pixel values
 							normalize(eyeL, eyeL, 0, 255, cv::NORM_MINMAX);
 							normalize(eyeR, eyeR, 0, 255, cv::NORM_MINMAX);
 							normalize(Mouth, Mouth, 0, 255, cv::NORM_MINMAX);
