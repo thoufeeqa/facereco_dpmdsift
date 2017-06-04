@@ -1,4 +1,7 @@
-/*This program implements the Deformable parts model and dense SIFT
+/*This program implements the Deformable parts model and dense SIFT algortithms to extract features
+	and recognise faces.
+
+	
 */
 
 #include "opencv2/opencv.hpp"

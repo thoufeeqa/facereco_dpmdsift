@@ -1,5 +1,11 @@
-/*This program is the test phase uses Dense SIFT algorithm
+/*This program is the test phase. Uses Dense SIFT algorithm
 	with DPM in recognizing the person
+
+	Input files are fed in as a CSV. These contain the face and the label of the person
+	Multiple images with different lighting and angles are provided for each person
+
+	The model extracts fearure points from different regions of interest for each face.
+	A support vector machine is trained with the feature point data for each person
 */
 #include "opencv2/opencv.hpp"
 #include "opencv2/core/core.hpp"
