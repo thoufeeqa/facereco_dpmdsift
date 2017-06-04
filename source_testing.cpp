@@ -1,7 +1,13 @@
 /*This program implements the Deformable parts model and dense SIFT algortithms to extract features
 	and recognise faces.
 
-	
+	Operates on videos or real-time feeds
+	The haar cascade model is used intially to recongize face(s) in a frame.
+
+	Regions of interests are then defined by the deformable parts model  - eyes, nose, mouth
+	The Dense SIFT algorithm runs only on the regions of interest and extracts feature points
+	A support vector machine trained previously uses the feature data to recognize each face in a frame
+
 */
 
 #include "opencv2/opencv.hpp"
