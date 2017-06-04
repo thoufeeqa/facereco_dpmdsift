@@ -4,8 +4,12 @@
 	Operates on videos or real-time feeds
 	The haar cascade model is used intially to recongize face(s) in a frame.
 
-	Regions of interests are then defined by the deformable parts model  - eyes, nose, mouth
-	The Dense SIFT algorithm runs only on the regions of interest and extracts feature points
+	Regions of interests are then defined by the
+	 deformable parts model - eyes, nose, mouth (runs only within the bounds defined by the haar cascade model)  
+	
+	The Dense SIFT algorithm then operated on the regions of interest defined 
+		by the deformable parts model and extracts feature points
+	
 	A support vector machine trained previously uses the feature data to recognize each face in a frame
 
 */
